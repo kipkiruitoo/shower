@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css?family=Sriracha&display=swap");
+#app {
+  font-family: sans-serif;
+  color: #2d3748;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+h3 {
+  margin: 0;
+}
+
+.container {
+  margin: auto;
+  max-width: 800px;
+  padding: 80px 16px;
+}
+.section {
+  text-align: center;
+}
+.quote-symbol {
+  font-size: 64px;
+  line-height: 0;
+  margin-top: 50px;
+  color: white;
+}
+.quote a {
+  text-decoration: none;
+  font-family: "Sriracha", cursive;
+  color: white;
+  font-size: 22px;
+  line-height: 1.5;
+}
+.quote a:hover {
+  color: #edf2f7;
+}
+.details {
+  font-family: "Sriracha", cursive;
+}
+.details-author {
+  font-family: "Sriracha", cursive;
+  color: yellow;
+  mix-blend-mode: difference;
+}
+.details .stats {
+  color: white;
+  mix-blend-mode: difference;
+  margin-top: 4px;
+}
+
+.lds-ellipsis {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-ellipsis div {
+  position: absolute;
+  top: 33px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: #41b883;
+  animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+.lds-ellipsis div:nth-child(1) {
+  left: 8px;
+  animation: lds-ellipsis1 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(2) {
+  left: 8px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(3) {
+  left: 32px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(4) {
+  left: 56px;
+  animation: lds-ellipsis3 0.6s infinite;
+}
+@keyframes lds-ellipsis1 {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes lds-ellipsis3 {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes lds-ellipsis2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(24px, 0);
+  }
+}
+.loader {
+  margin: auto;
+  width: 50%;
+  padding-top: 50vh;
+  text-align: center;
+}

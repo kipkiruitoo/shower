@@ -1,0 +1,7 @@
+{
+  "name": "shower",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

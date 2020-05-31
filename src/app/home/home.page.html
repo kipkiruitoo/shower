@@ -1,0 +1,58 @@
+<ion-content [fullscreen]="true">
+  <!-- <div fullpage id="fullpage" [options]="config" (ref)="getRef($event)">
+    <div class="section" *ngFor="let showerThought of showerThoughts" (click)="fullpage_api.moveSectionDown()">
+      <div class="container">
+        <img src="../../assets/shower.png" alt="shower icon" />
+        <div class="quote-symbol">"</div>
+        <p class="quote">
+          <a :href="showerThought.data.url">{{ showerThought.data.title }}</a>
+        </p>
+        <div class="details">
+          <div class="details-author">Author: {{showerThought.data.auth}}</div>
+          <div class="stats">
+            {{showerThought.data.ups}} upvotes |
+            {{showerThought.data.num_comments}} comments
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> -->
+  <!-- app.component.html -->
+  <div
+    fullpage
+    id="fullpage"
+    *ngIf="ifLoaded"
+    [options]="config"
+    (ref)="getRef($event)"
+  >
+    <div class="section" *ngFor="let showerThought of showerThoughts">
+      <div class="container">
+        <img src="../../assets/shower.png" alt="shower icon" />
+        <div class="quote-symbol">❝</div>
+        <p class="quote">
+          <a href="{{showerThought.data.url}}"
+            >{{ showerThought.data.title }}</a
+          >
+        </p>
+        <div class="details">
+          <div class="details-author">Author: {{showerThought.data.author}}</div>
+          <div class="stats">
+            {{showerThought.data.ups}} upvotes |
+            {{showerThought.data.num_comments}} comments
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="section" (click)="fullpage_api.moveTo('secondPage', 2)">
+      Some section4
+    </div> -->
+  </div>
+  <div class="loader" *ngIf="!ifLoaded">
+    <div class="lds-ellipsis">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+</ion-content>
